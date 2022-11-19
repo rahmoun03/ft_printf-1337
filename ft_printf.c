@@ -6,7 +6,7 @@
 /*   By: arahmoun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 20:45:00 by arahmoun          #+#    #+#             */
-/*   Updated: 2022/11/07 20:45:46 by arahmoun         ###   ########.fr       */
+/*   Updated: 2022/11/19 16:34:14 by arahmoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -54,7 +54,7 @@ int	ft_putit(va_list ptr, const char *str)
 			a += ft_putstr("0x");
 			a += ft_printhexa(va_arg(ptr, unsigned long), "0123456789abcdef");
 		}
-		else if (str[i] == '%' && str[i + 1] != '%')
+		else if (str[i] == '%' && str[++i] != '%')
 			continue ;
 		else
 			a += ft_putchar(str[i--]);

@@ -13,9 +13,9 @@ ${NAME} :${OBJ}
 all :${NAME}
 
 clean :
-	rm -rf ${NAME}
+	rm -rf ${OBJ}
 
 fclean :clean
-	rm -rf ${OBJ}
+	rm -rf ${NAME}
 
 re :fclean all
